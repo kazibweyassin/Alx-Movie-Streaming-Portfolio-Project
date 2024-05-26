@@ -3,12 +3,15 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Footer from '../common/Footer'
 import Topbar from '../common/Topbar'
+import GlobalLoading from '../common/GlobalLoading'
+
+
 
 const MainLayout = () => {
     return (
         <>
-
                 {/* <GLOBAL LOADING> */}
+                <GlobalLoading />
                 {/* <GLOBAL LOADING /> */}
 
                 {/* <LOGIN MODAL> */}
