@@ -1,4 +1,3 @@
-import { Drawer, List, ListItemButton, ListItemIcon, ListItemText, Stack, Toolbar, Typography } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import menuConfigs from "../../configs/menu.configs";
@@ -6,6 +5,7 @@ import Logo from "./Logo";
 import uiConfigs from "../../configs/ui.configs";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
+import { Drawer, List, ListItemButton, ListItemIcon, ListItemText, Stack, Toolbar, Typography } from "@mui/material";
 
 import { themeModes } from "../../configs/theme.configs";
 import { setThemeMode } from "../../redux/features/themeModeSlice";
@@ -26,7 +26,7 @@ const Sidebar = ({ open, toggleSidebar }) => {
 
     const drawer = (
         <>
-            <Toolbar sx={{ paddingY: "30px", color: "text.primary" }}>
+            <Toolbar sx={{ paddingY: "40px", color: "text.primary" }}>
                 <Stack width="100%" direction="row" justifyContent="center">
                     <Logo />
                 </Stack>

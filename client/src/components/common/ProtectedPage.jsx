@@ -16,4 +16,4 @@ const ProtectedPage = ({ children }) => {
     ); 
 };
 
-export default ProtectedPage
+export default ProtectedPage;

@@ -20,7 +20,7 @@ const UserMenu = () => {
             {user && (
                 <>
                     <Typography
-                        variant="h6"
+                        variant="h5"
                         sx={{ cursor: "pointer", userSelect: "none" }}
                         onClick={toggleMenu}
                     >
@@ -55,7 +55,7 @@ const UserMenu = () => {
                             } />
                         </ListItemButton>
                     </Menu>
-                </>
+                </> 
             )}
         </>
     );

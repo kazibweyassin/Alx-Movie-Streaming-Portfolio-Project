@@ -11,8 +11,8 @@ const store = configureStore({
         authModal: authModalSlice,
         themeMode: themeModeSlice,
         globalLoading: globalLoadingSlice,
-        user: userSlice,
-    },
+        user: userSlice
+    }
     });
 
 export default store;
