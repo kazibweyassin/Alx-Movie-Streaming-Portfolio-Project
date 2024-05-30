@@ -58,10 +58,20 @@ Create a new Pull Request.
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-Feel free to customize this documentation further based on your specific project details and requirements.
 
 
 
 
 
 
+Overview
+
+Let's face it, forms are really verbose in React. To make matters worse, most form helpers do wayyyy too much magic and often have a significant performance cost associated with them. Formik is a small library that helps you with the 3 most annoying parts:
+
+    Getting values in and out of form state
+    Validation and error messages
+    Handling form submission
+
+
+
+    npm i query-string

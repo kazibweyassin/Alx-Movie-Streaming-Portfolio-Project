@@ -1,6 +1,17 @@
 import responseHandler from "../handlers/response.handler.js";
 import reviewModel from "../models/review.model.js";
 
+/**
+ * Create a new review for a movie.
+ * 
+ * @param {Object} req - The request object.
+ * @param {Object} req.params - The parameters extracted from the request URL.
+ * @param {string} req.params.movieId - The ID of the movie for which the review is being created.
+ * @param {Object} req.user - The user object representing the user creating the review.
+ * @param {Object} req.body - The request body containing the review details.
+ * @param {Object} res - The response object.
+ * @returns {Promise<void>} - A promise that resolves when the review is created and saved.
+ */
 const create = async (req, res) => {
     try {
         const { movieId } = req.params;
@@ -53,5 +64,6 @@ const getReviewsOfUser = async (req, res) => {
         responseHandler.error(res);
     }
 };
+
 
 export default { create, remove, getReviewsOfUser };

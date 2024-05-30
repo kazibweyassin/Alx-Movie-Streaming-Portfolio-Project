@@ -1,8 +1,8 @@
 import express from "express";
 import cookieParser from "cookie-parser";
+import mongoose from "mongoose";
 import cors from "cors";
 import http from "http";
-import mongoose from "mongoose";
 import "dotenv/config";
 import routes from "./src/routes/index.js"
 
@@ -15,7 +15,6 @@ app.use(cookieParser());
 
 app.use("/api/v1", routes)
 
- 
 
 const port = process.env.PORT || 5000;
 
@@ -31,4 +30,3 @@ mongoose.connect(process.env.MONGODB_URL).then(() => {
     process.exit(1);
 });
 
-//test
