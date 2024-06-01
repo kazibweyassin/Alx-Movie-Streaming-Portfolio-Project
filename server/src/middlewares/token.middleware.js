@@ -1,38 +1,38 @@
-import jwt from 'jsonwebtoken';
-import responseHandler from '../handlers/response.handler.js';
-import userModel from '../models/user.model.js';
+import jsonwebtoken from "jsonwebtoken";
+import responseHandler from "../handlers/response.handler.js";
+import userModel from "../models/user.model.js";
 
-const tokenDecoded = (req) => {
-    try {
-        const bearerHeader = req.headers['authorization'];
+const tokenDecode = (req) => {
+  try {
+    const bearerHeader = req.headers["authorization"];
 
-        if (bearerHeader) {
-            const token = bearerHeader.split(' ')[1];
-            return jwt.verify(token, process.env.JWT_SECRET);
-        }
+    if (bearerHeader) {
+      const token = bearerHeader.split(" ")[1];
 
-        return null;
-    } catch (error) {
-        // Handle token verification errors
-        return null;
+      return jsonwebtoken.verify(
+        token,
+        process.env.TOKEN_SECRET
+      );
     }
+
+    return false;
+  } catch {
+    return false;
+  }
 };
 
 const auth = async (req, res, next) => {
-    const tokenDecodeData = tokenDecoded(req);
-    if (!tokenDecodeData) return responseHandler.unauthorized(res);
+  const tokenDecoded = tokenDecode(req);
 
-    try {
-        const user = await userModel.findById(tokenDecodeData.id);
-        if (!user) return responseHandler.unauthorized(res);
+  if (!tokenDecoded) return responseHandler.unauthorize(res);
 
-        // Pass decoded token data to the next middleware
-        req.user = user;
-        next();
-    } catch (error) {
-        // Handle database errors
-        return responseHandler.internalServerError(res);
-    }
+  const user = await userModel.findById(tokenDecoded.data);
+
+  if (!user) return responseHandler.unauthorize(res);
+
+  req.user = user;
+
+  next();
 };
 
-export default { auth, tokenDecoded };
+export default { auth, tokenDecode };
