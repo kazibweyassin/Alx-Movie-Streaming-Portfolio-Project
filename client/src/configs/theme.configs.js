@@ -2,49 +2,49 @@ import { createTheme } from "@mui/material/styles";
 import { colors } from "@mui/material";
 
 export const themeModes = {
-    dark: "dark",
-    light: "light"
+  dark: "dark",
+  light: "light"
 };
 
 const themeConfigs = {
-    custom: ({ mode }) => {
-        const customPalette = mode === themeModes.dark ? {
-            primary: {
-                main: "#800080",
-                contrastText: "#ffffff"
-            },
-            secondary: {
-                main: "#800080",
-                contrastText: "#ffffff"
-            },
-            background: {
-                default: "#000000",
-                paper: "#131313"
-            }
-        } : {
-            primary: {
-                main: "#800080"
-            },
-            secondary: {
-                main: "#800080"
-            },
-            background: {
-                default: colors.grey["100"],
-            }
-        };
+  custom: ({ mode }) => {
+    const customPalette = mode === themeModes.dark ? {
+      primary: {
+        main: "#7b1fa2", // Deep purple main color
+        contrastText: "#ffffff"
+      },
+      secondary: {
+        main: "#f44336",
+        contrastText: "#ffffff"
+      },
+      background: {
+        default: "#000000",
+        paper: "#131313"
+      }
+    } : {
+      primary: {
+        main: "#7b1fa2" // Deep purple main color
+      },
+      secondary: {
+        main: "#f44336"
+      },
+      background: {
+        default: colors.grey["100"],
+      }
+    };
 
-        return createTheme({
-            palette: {
-                mode,
-                ...customPalette
-            },
-            components: {
-                MuiButton: {
-                    defaultProps: { disableElevation: true }
-                }
-            }
-        });
-    }
+    return createTheme({
+      palette: {
+        mode,
+        ...customPalette
+      },
+      components: {
+        MuiButton: {
+          defaultProps: { disableElevation: true }
+        }
+      }
+    });
+  }
 };
 
 export default themeConfigs;
