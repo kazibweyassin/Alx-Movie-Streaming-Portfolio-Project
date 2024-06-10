@@ -1,0 +1,28 @@
+.hero .date {
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    transition: 1s;
+    z-index: 1000;
+}
+
+.hero .date.active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+.hero .date h2 {
+    font-family: 'Racing Sans One', cursive;
+    font-size: 7rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    color: transparent; /* Make the text color transparent */
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #f00, #0f0); 
+    -webkit-background-clip: text; /* Apply the background only to the text */
+    background-clip: text; /* Standard property, currently not fully supported in all browsers */
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+
+}

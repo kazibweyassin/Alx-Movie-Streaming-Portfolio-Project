@@ -1,0 +1,27 @@
+.mainBtn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 15px;
+    background: var(--primary);
+    color: #eda5a5;
+    padding: 5px 16px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    cursor:  pointer !important;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    background-color: #bfbbbb;
+    border-radius: %;
+}
+
+.mainBtn:hover {
+    background: var(--primary) !important;
+    background: #ffffff !important;
+    cursor: pointer !important;
+}

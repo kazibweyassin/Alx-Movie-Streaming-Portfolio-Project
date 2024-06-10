@@ -1,0 +1,34 @@
+.search {
+    position: relative;
+    width: 300px;
+    height: 40px;
+}
+
+.search input {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    background: transparent;
+    font-size: 16px;
+    border: 1px solid #313030;
+    border-radius: 5px;
+    padding: 0 10px 0 45px !important;
+    backdrop-filter: blur(10px);
+}
+
+.search input::placeholder {
+    color: #ffffff;
+}
+
+.search ion-icon {
+    position: absolute;
+    transform: translateY(-50%);
+    left: 10px;
+    top: 50%;
+    color: #ffffff;
+    border-right: 1px solid #ffffff
+}
+

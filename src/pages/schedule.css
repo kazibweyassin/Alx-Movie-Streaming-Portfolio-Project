@@ -1,0 +1,22 @@
+.schedule .filters {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.schedule .filters li {
+    color: #ffffff;
+    background-color: #191919;
+    border-radius: 5px;
+    transition: 0.3s;
+    padding: 10px 26px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.schedule .filters li:hover, 
+.schedule .filters li.active{
+    background-color: var(--primary-color);
+}

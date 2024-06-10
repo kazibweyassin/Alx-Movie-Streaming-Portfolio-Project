@@ -1,0 +1,198 @@
+/* footer.css */
+
+.footer {
+    background: #1a1a1a;
+    color: #ddd;
+    padding: 60px 0;
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
+    background-image: url('../images/footer.jpg');
+    list-style: none;
+    text-decoration: none;
+    background-size: cover;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+}
+
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+}
+
+.footer h3::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: #f44336;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+
+.footer p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+    color: #bbb;
+}
+
+.footer .footer-info {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.footer .social-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+.footer .social-links a {
+    font-size: 20px;
+    color: #ddd;
+    transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+    color: #f44336;
+}
+
+.footer .footer-links {
+    margin-bottom: 30px;
+}
+
+.footer .footer-links h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #fff;
+    position: relative;
+}
+
+.footer .footer-links h4::after {
+    content: '';
+    width: 30px;
+    height: 2px;
+    background: #f44336;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+}
+
+.footer .footer-links a {
+    color: #ddd;
+    display: block;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.footer .footer-links a:hover {
+    color: #f44336;
+    text-decoration: none;
+}
+
+.footer .footer-contact {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.footer .footer-contact p {
+    line-height: 1.8;
+}
+
+.footer .footer-contact h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #fff;
+    position: relative;
+}
+
+.footer .footer-contact h4::after {
+    content: '';
+    width: 30px;
+    height: 2px;
+    background: #f44336;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -8px;
+}
+
+.footer .footer-contact p {
+    color: #bbb;
+}
+
+.footer .footer-contact p a {
+    color: #f44336;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer .footer-contact p a:hover {
+    text-decoration: underline;
+}
+
+.footer .copyright {
+    text-align: center;
+    margin-top: 30px;
+    color: #bbb;
+}
+
+.footer .copyright strong {
+    font-weight: 600;
+    color: #fff;
+}
+
+.footer .credits {
+    text-align: center;
+    margin-top: 10px;
+    color: #bbb;
+}
+
+.footer .credits a {
+    color: #f44336;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer .credits a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .footer .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .footer-links,
+    .footer .footer-contact {
+        text-align: center;
+    }
+
+    .footer .footer-links {
+        margin-bottom: 20px;
+    }
+
+    .footer .footer-contact {
+        margin-bottom: 20px;
+    }
+}

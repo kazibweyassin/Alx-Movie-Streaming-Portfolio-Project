@@ -1,0 +1,52 @@
+.hero .content {
+    position: relative;
+    max-width: 600px;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    transition: 1s;
+    z-index: 1000;
+}
+
+.hero .content.active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.movie-title {
+    max-width: 250px;
+    margin-bottom: 20px;
+}
+
+.hero .content h4 {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.hero .content h4 span {
+    padding: 0 10px;
+    border-right: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.hero .content h4 span:last-child {
+    padding-left: 0;
+    border-right: 0;
+}
+
+.hero .content h4 span i {
+    padding: 0 10px;
+    background: var(--primary-color);
+    color: #ffffff;
+    display: inline;
+    border-radius: 2px;
+}
+
+.hero .content p {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    margin: 20px 0 30px;
+}
